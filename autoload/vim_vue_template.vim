@@ -18,7 +18,7 @@ let s:output = getcwd()
 let s:template = expand('<sfile>:p:h').'/../source/template.vue'
 
 function! s:copy_file(source, dist)
-	l:list = []
+	let l:list = []
 	for buf in readfile(a:source)
 		call add(l:list, buf)
 	endfor
