@@ -27,7 +27,7 @@ endfunction
 
 function! vim_vue_template#init(...)
 	if a:0 >= 1
-		call s:copy_file(s:template, s:output.'/'.a:1.'vue')
+		call s:copy_file(s:template, s:output.'/'.a:1.'.vue')
 	else
 		echo 'hoge'
 	endif
