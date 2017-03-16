@@ -18,10 +18,10 @@ let s:output = getcwd()
 let s:template = expand('<sfile>:p:h').'/../source/template.vue'
 
 function! s:copy_file(source, dist)
-	let buf
+	let l:buf
 	for buf in readfile(a:source)
 	endfor
-	writefile(buf, a:dist)
+	call writefile(l:buf, a:dist)
 endfunction
 
 function! vim_vue_template#init(...)
