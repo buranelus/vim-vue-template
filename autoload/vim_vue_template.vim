@@ -16,17 +16,16 @@ set cpo&vim
 
 let s:output = getcwd()
 let s:template = expand('<sfile>:p:h').'/../source/template.vue'
-let s:buf = []
 
-function! s:copy_file(source, buf, dist)
-	for a:buf in readfile(a:source)
+function! s:copy_file(source, dist)
+	for buf in readfile(a:source)
 	endfor
-	writefile(a:buf, a:dist)
+	writefile(buf, a:dist)
 endfunction
 
 function! vim_vue_template#init(...)
 	if a:0 >= 1
-		call s:copy_file(s:template, s:buf, s:output.'/'.a:1.'vue')
+		call s:copy_file(s:template, s:output.'/'.a:1.'vue')
 	else
 		echo 'hoge'
 	endif
