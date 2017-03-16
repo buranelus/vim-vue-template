@@ -16,7 +16,7 @@ set cpo&vim
 
 let s:output = getcwd()
 let s:template = expand('<sfile>:p:h').'/../source/template.vue'
-let buf = []
+let s:buf = []
 
 function! s:copy_file(source, buf, dist)
 	for a:buf in readfile(a:source)
