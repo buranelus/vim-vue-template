@@ -7,7 +7,7 @@ vue-cliを使ってコードを書く時用に.vueファイルを生成する
 
 ## 生成されるもの
 
-```
+```html
 <template>
 </template>
 
