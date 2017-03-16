@@ -13,6 +13,7 @@ vue-cliを使ってコードを書く時用に.vueファイルを生成する
 
 <script>
 export default {
+  name: '',
   data () {
     return {
     }
