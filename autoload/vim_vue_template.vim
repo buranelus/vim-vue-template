@@ -18,6 +18,7 @@ let s:output = getcwd()
 let s:template = expand('<sfile>:p:h').'/../source/template.vue'
 
 function! s:copy_file(source, dist)
+	let buf
 	for buf in readfile(a:source)
 	endfor
 	writefile(buf, a:dist)
