@@ -25,11 +25,19 @@ function! s:copy_file(source, dist)
 	call writefile(l:list, a:dist)
 endfunction
 
+function! s:insert_file(source)
+	let l:list = []
+	for buf in readfile(a:source)
+		call add(l:list, buf)
+	endfor
+	call append(0, l:list)
+endfunction
+
 function! vim_vue_template#init(...)
 	if a:0 >= 1
 		call s:copy_file(s:template, s:output.'/'.a:1.'.vue')
 	else
-		echo 'hoge'
+		echo s:insert_file(s:template)
 	endif
 endfunction
 
