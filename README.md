@@ -3,8 +3,8 @@ vue-cliを使ってコードを書く時用に.vueファイルを生成する
 
 ## 使い方
 
-`:VueInit で現在開いているファイルの先頭にテンプレートを挿入する
-`:VueInit FileName` でカレントディレクトリにFileName.vueを作成する
+`:VueInit` で現在開いているファイルの先頭にテンプレートを挿入する  
+`:VueInit FileName` でカレントディレクトリにFileName.vueを作成する  
 
 ## 生成されるもの
 
